@@ -58,7 +58,8 @@ def readSentimentFileFromGit():
     This function grabs AFINN-111.txt from an online
     resource, and then it creates a dictionary object
     from that list.  The dictionary is used as we score
-    texts.
+    texts. (Thank you Univ. of Washington and Finn Arup
+    Nielsen.) 
     '''
     page = urllib.urlopen('https://raw.githubusercontent.com/uwescience/datasci_course_materials/master/assignment1/AFINN-111.txt')
     wordScores = {}

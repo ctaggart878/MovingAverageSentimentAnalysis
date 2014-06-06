@@ -30,7 +30,7 @@
 #  and execute code all at once, all in the same place.
 #
 #  Questions?  Email me:  ctgrant@gmail.com
-#  As for licenses:  Be nice and give credit. 
+#  As for licenses:  Be nice, give credit, and let me know if you do something interesting.
 
 import os
 import matplotlib.pyplot as plt

@@ -33,6 +33,6 @@ variables.  If that sounds like a headache, you may be better off
 downloading pycharm.  It's free.  It's awesome. And you can edit
 and execute code all at once, all in the same place.
 
-Questions?  Email me:  ctgrant@gmail.com
+Questions?  Email me:  ctgrant at gmail.com
 
 As for licenses:  Be nice, give credit, and let me know if you do something interesting. 

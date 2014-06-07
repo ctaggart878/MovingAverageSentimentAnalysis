@@ -32,9 +32,11 @@
 #  Questions?  Email me:  ctgrant at gmail.com
 #  As for licenses:  Be nice, give credit, and let me know if you do something interesting.
 
+
+
 import os
-import matplotlib.pyplot as plt
 import matplotlib
+import matplotlib.pyplot as plt
 import numpy as np
 import re
 import urllib
@@ -193,7 +195,7 @@ def plotScoreMA(movAvgScore, textName, movingAveragePeriod=550):
     plt.plot(movAvgScore)
     plt.suptitle("File: " + textName + " - Moving Average Period: " + str(movingAveragePeriod))
     plt.ylabel("Sentiment Score")
-    xticks = np.arange(0,len(movAvgScore),500)
+    xticks = np.arange(0,len(movAvgScore),1000)
     plt.xticks(xticks)
     for i in range(0,len(movAvgScore),1000):
         matplotlib.pyplot.axvline(i,ymin = -1, ymax = 1)
@@ -221,7 +223,7 @@ def printText(wordList, movAvgScore, start=550, end=1000):
             filler = " "
         else:
             filler = "  "
-        print(str(i) + "\t" + filler + str("%.3f" % (movAvgScore[i] * 100)) + ": \t"+ " ".join(wordList[(i-20):(i)]))
+        print(str(i) + "\t" + filler + str("%.3f" % (movAvgScore[i] * 100)) + ": \t"+ " ".join(wordList[(i):(i+10)]))
 
 
 # Instead of printing to the console, this saves a new file with the
@@ -250,7 +252,7 @@ def saveText(wordList, movAvgScore, fileName):
             filler = " "
         else:
             filler = "  "
-        file.write("%s\n" % (str(i) + "\t" + filler + str("%.3f" % (movAvgScore[i] * 100)) + ": \t"+ " ".join(wordList[(i-20):(i)])))
+        file.write("%s\n" % (str(i) + "\t" + filler + str("%.3f" % (movAvgScore[i] * 100)) + ": \t"+ " ".join(wordList[(i):(i+10)])))
     file.close
 
 
@@ -315,6 +317,8 @@ def negativeWordsScore(wordList):
 ###
 ########################################################################
 ########################################################################
+
+
 
 
 # If you execute from an ide, or some other means, you can assign
